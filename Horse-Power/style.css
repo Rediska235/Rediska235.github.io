@@ -1,0 +1,47 @@
+/*.container {
+    width: 80%;
+}*/
+
+.phones{
+    font-size: larger;
+}
+
+.line{
+    margin-top: 20px;
+    height: 1px;
+    background: #223046;
+}
+
+.white-text{
+    color: #fff;
+}
+
+.btn{
+    color: #fff;
+}
+
+.btn:hover{
+    color: rgb(79, 79, 79);
+}
+
+.purple{
+    background-color: rgb(132, 60, 183);
+}
+.text-purple{
+    color: rgb(132, 60, 183);
+}
+
+.round{
+    border-radius: 50%;
+}
+
+.more-info{
+    text-decoration: none;
+    position: absolute;
+    right: 8%;
+    bottom: 0%;
+}
+
+footer{
+    background-color: black;
+}

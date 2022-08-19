@@ -1,0 +1,39 @@
+.container {
+    width: 80%;
+}
+
+#line{
+    margin-top: 20px;
+    height: 1px;
+    background: #223046;
+}
+
+.nav-item{
+    color: #fff;
+    background: #3072d4;
+}
+
+.btn{
+    color: #fff;
+}
+
+.btn:hover{
+    color: #fff;
+}
+
+.nav-item:hover{
+    background:#ffd561;
+    color: #000;
+    cursor: pointer;
+}
+
+footer .nav-item{
+    color: #fff;
+    background: #43474d;
+}
+
+footer .nav-item:hover{
+    background:#e4e4e4;
+    color: #000;
+    cursor: pointer;
+}

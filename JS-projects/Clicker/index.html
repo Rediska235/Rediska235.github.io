@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h1 style="text-align: center;">JS course</h1>
+        <h2 style="text-align: center;">mini-clicker</h2>
+    </div>
+    
+    <p id="money" style="font-size: 40px; text-align: center; margin-top: 10%;">0$</p>
+
+    <div id="buttons">
+        <button class="btn btn-active" id="btn1">+1$</button>
+        <button class="btn" onclick="buy(this, 20, '+5$', fiveBucks)">+5$ (cost 20$)</button>
+        <button class="btn" onclick="buyWorker(50)">worker 1$/sec (cost 50$)</button>
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>

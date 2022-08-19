@@ -1,0 +1,49 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+}
+
+a{
+    outline: none;
+    color: antiquewhite;
+}
+
+#header{
+    top: 0;
+    background-color:rgb(62, 62, 62);
+    color: antiquewhite;
+    text-align: center;
+    padding: 2%;
+}
+
+#welcome{
+    font-size: 34px;
+}
+#hereYouCanSee{
+    margin-top: 15px;
+    font-size: 18px;
+}
+
+body{
+    background-color: rgb(39, 39, 39);
+}
+
+#content{
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    margin-top: 5%;
+}
+
+.block{
+    float: left;
+    width: 20%;
+    margin: 2%;
+}
+
+.description{
+    color: rgb(185, 180, 174);
+}
