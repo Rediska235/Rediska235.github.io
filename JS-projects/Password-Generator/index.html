@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h1 style="text-align: center;">JS course</h1>
+        <h2 style="text-align: center;">password generator</h2>
+    </div>
+
+    <div id="content">
+        <div id="block">
+            <div id="pass-container">
+                <input id="pass" type="text">
+                <button class="btn copy" onclick="copy()">copy</button>
+            </div>
+            
+            <div id="options">
+                <div class="length-option">
+                    <span>Password length</span>
+                    <div></div>
+                    <input type="range" id="range" onchange="counterUpdate()" value="8" min="2" max="20">
+                    <span id="counter">8</span>
+                </div>
+
+                <div class="option">
+                    <span>Upper case letters</span>
+                    <input type="checkbox" class="check" id="upper">
+                </div>
+                <div class="option">
+                    <span>Numers</span>
+                    <input type="checkbox" class="check" id="numbers">
+                </div>
+                <div class="option">
+                    <span>Special symbols</span>
+                    <input type="checkbox" class="check" id="symbols">
+                </div>
+            </div>
+
+            <button class="btn generate" onclick="generate()">Generate</button>
+        </div>
+    </div>
+
+
+
+    <script src="generatorScript.js"></script>
+</body>
+</html>
