@@ -1,0 +1,48 @@
+/* Colors */
+:root {
+    --backgroundColor: #629098;
+    --mainColor: #4c3457;
+    --textColor: #ffe7cd;
+    --btnColor: #e4a39f;
+    --btnHoverColor: #ebb7b4;
+    --btnTextColor: black;
+}
+
+body{
+    background-color: var(--backgroundColor);
+    color: var(--textColor);
+}
+
+#content{
+    background-color: var(--mainColor);
+}
+
+.btn{
+    background-color: var(--btnColor);
+    color: var(--btnTextColor);
+}
+
+.btn:hover{
+    background-color: var(--btnHoverColor);
+}
+
+
+/* Themes */
+#themes{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background-color: var(--mainColor);
+}
+
+#themes:hover{
+    top: 15px;
+    right: 15px;
+
+    height: 50px;
+    width: 50px;
+}

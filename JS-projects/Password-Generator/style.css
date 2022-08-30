@@ -1,6 +1,4 @@
 body{
-    background-color: #629098;
-    color: #ffe7cd;
     font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -10,7 +8,6 @@ body{
     width: 20%;
     min-width: 400px;
     margin-top: 5%;
-    background-color: #4c3457;
 }
 
 #pass-container{
@@ -57,8 +54,6 @@ body{
 }
 
 .btn{
-    background-color: #e4a39f;
-    color: rgb(14, 14, 14);
     border: 0px;
     font-size: 20px;
 }
@@ -76,27 +71,24 @@ body{
     margin-top: 10%;
 }
 
-.btn:hover{
-    background-color: #ecb5b2;
-}
-
 
 
 /*Border radius*/
 #content{
-    border-radius: 12px;
+    --radius: 12px;
+    border-radius: var(--radius);
 }
 
 #pass{
-    border-top-left-radius: 12px;
-    border-top-right-radius: 12px;
+    border-top-left-radius: var(--radius);
+    border-top-right-radius: var(--radius);
 }
 
 .copy{
-    border-top-right-radius: 12px;
+    border-top-right-radius: var(--radius);
 }
 
 .generate{
-    border-bottom-left-radius: 12px;
-    border-bottom-right-radius: 12px;
+    border-bottom-left-radius: var(--radius);
+    border-bottom-right-radius: var(--radius);
 }
