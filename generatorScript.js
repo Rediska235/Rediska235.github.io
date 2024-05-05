@@ -12,7 +12,7 @@ const numbers = "0123456789";
 const symbols = "!@#$%^&*()_-=+/";
 
 var allowedSymbols = lower;
-var prevLengthValue = 0;
+var prevLengthValue = 12;
 
 updateAllowedSymbols();
 generate();
