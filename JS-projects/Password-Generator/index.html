@@ -12,50 +12,46 @@
     <div id="themes" onclick="changeTheme()"></div>
 
     <div>
-        <h1 style="text-align: center;">Password generator 💫</h1>
+        <h1 style="text-align: center;">JS course</h1>
+        <h2 style="text-align: center;">password generator</h2>
     </div>
 
     <div id="content">
         <div id="block">
             <div id="pass-container">
                 <input id="pass" type="text">
-                <button class="btn" id="copy-btn" onclick="copy()">copy</button>
+                <button class="btn copy" onclick="copy()">copy</button>
             </div>
             
             <div id="options">
                 <div class="length-option">
                     <span>Password length</span>
                     <div></div>
-                    <input type="range" id="range" onchange="counterUpdate()" value="12" min="2" max="20">
-                    <span id="counter">12</span>
+                    <input type="range" id="range" onchange="counterUpdate()" value="8" min="2" max="20">
+                    <span id="counter">8</span>
                 </div>
 
                 <div class="option">
                     <span>Upper case letters</span>
-                    <input type="checkbox" id="upper" checked>
+                    <input type="checkbox" class="check" id="upper">
                 </div>
                 <div class="option">
                     <span>Numers</span>
-                    <input type="checkbox" id="numbers" checked>
+                    <input type="checkbox" class="check" id="numbers">
                 </div>
                 <div class="option">
                     <span>Special symbols</span>
-                    <input type="checkbox" id="symbols" checked>
+                    <input type="checkbox" class="check" id="symbols">
                 </div>
             </div>
 
             <button class="btn generate" onclick="generate()">Generate</button>
-            
-            <div id="popup-container">
-                <div id="popup-content">
-                  <span>Copied!</span>
-                </div>
-              </div>
         </div>
     </div>
 
+
+
     <script src="generatorScript.js"></script>
     <script src="themesScript.js"></script>
-    <script src="popup.js"></script>
 </body>
 </html>

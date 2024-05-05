@@ -42,21 +42,21 @@
                 <div class="options">
                     <div class="option">
                         <span>Length</span>
-                        <input type="range" id="range" onchange="counterUpdate()" value="12" min="1" max="40">
+                        <input type="range" id="range" value="12" min="1" max="40">
                         <span id="counter">12</span>
                     </div>
 
                     <div class="option">
                         <span>Uppercases (A-Z)</span>
-                        <input type="checkbox" id="upper" checked>
+                        <input type="checkbox" id="upper" onchange="updateAllowedSymbols()" checked>
                     </div>
                     <div class="option">
                         <span>Numbers (0-9)</span>
-                        <input type="checkbox" id="numbers" checked>
+                        <input type="checkbox" id="numbers" onchange="updateAllowedSymbols()" checked>
                     </div>
                     <div class="option">
                         <span>Symbols (&#@$)</span>
-                        <input type="checkbox" id="symbols" checked>
+                        <input type="checkbox" id="symbols" onchange="updateAllowedSymbols()" checked>
                     </div>
                 </div>
 

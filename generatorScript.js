@@ -11,14 +11,13 @@ const upper = lower.toUpperCase();
 const numbers = "0123456789";
 const symbols = "!@#$%^&*()_-=+/";
 
+var allowedSymbols = lower;
+var prevLengthValue = 0;
+
+updateAllowedSymbols();
 generate();
 
-function counterUpdate() {
-  counter.innerHTML = range.value;
-}
-
-function generate() {
-  var password = "";
+function updateAllowedSymbols() {
   var str = lower;
 
   if (upperBox && upperBox.checked) {
@@ -31,35 +30,31 @@ function generate() {
     str += symbols;
   }
 
+  allowedSymbols = str;
+}
+
+function generate() {
+  var password = "";
   for (var i = 0; i < range.value; i++) {
-    password += generateChar(str);
+    password += generateChar();
   }
 
   inputField.value = password;
 }
 
-function generateChar(str) {
-  var index = getRandom(0, str.length);
-  return str[index];
+function generateChar() {
+  var index = getRandom(0, allowedSymbols.length);
+  return allowedSymbols[index];
 }
 
 function getRandom(min, max) {
   return Math.floor(Math.random() * (max - min) + min);
 }
 
-
-
 document.addEventListener('DOMContentLoaded', function () {
   inputField.addEventListener('click', function () {
     inputField.select();
-
-    try {
-      var successful = document.execCommand('copy');
-      var message = successful ? 'Text copied!' : 'Unable to copy text.';
-      console.log(message);
-    } catch (err) {
-      console.log('Unable to copy text.');
-    }
+    document.execCommand('copy');
     window.getSelection().removeAllRanges();
 
     var popupContainer = document.getElementById('popup-container');
@@ -70,5 +65,21 @@ document.addEventListener('DOMContentLoaded', function () {
       popupContainer.style.opacity = '0';
       popupContainer.style.visibility = 'hidden';
     }, 800);
+  });
+
+  range.addEventListener('input', function () {
+
+    if(range.value < prevLengthValue) {
+      inputField.value = inputField.value.substring(0, range.value);
+    }
+
+    if(range.value > prevLengthValue) {
+      for(var i = prevLengthValue; i < range.value; i++) {
+        inputField.value = inputField.value + generateChar();
+      }
+    }
+
+    counter.innerHTML = range.value;
+    prevLengthValue = range.value;
   });
 });

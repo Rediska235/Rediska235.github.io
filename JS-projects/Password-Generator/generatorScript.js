@@ -11,8 +11,6 @@ const upper = lower.toUpperCase();
 const numbers = "0123456789";
 const symbols = "!@#$%^&*()_-=+/";
 
-generate();
-
 function counterUpdate(){
   counter.innerHTML = range.value;
 }
@@ -39,7 +37,7 @@ function generate() {
 }
 
 function generateChar(str) {
-  var index = getRandom(0, str.length);
+  var index = getRandom(0, str.length); 
   return str[index];
 }
 
@@ -49,11 +47,8 @@ function getRandom(min, max) {
 
 function copy(){
   inputField.select();
+
   document.execCommand("copy");
 
-  var popup = document.getElementById("popup");
-  popup.classList.add("show");
-  setTimeout(function(){
-    popup.classList.remove("show");
-  }, 2000);
+  alert("Текст скопирован");
 }
