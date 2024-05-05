@@ -1,8 +1,8 @@
-body{
+body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-#content{
+#content {
     margin-left: auto;
     margin-right: auto;
     width: 20%;
@@ -10,12 +10,12 @@ body{
     margin-top: 5%;
 }
 
-#pass-container{
+#pass-container {
     height: 80px;
     position: relative;
 }
 
-#pass{
+#pass {
     border: 0px;
     padding: 0;
     width: 100%;
@@ -23,72 +23,102 @@ body{
     font-size: 36px;
 }
 
-#pass:focus{
-    outline: none; 
+#pass:focus {
+    outline: none;
 }
 
-#options{
+#options {
     padding: 10px;
 }
 
-#range{
+#range {
     margin-top: 4%;
     margin-right: 2%;
     width: 88%;
 }
 
-.option{
+.option {
     display: flex;
     justify-content: space-between;
     margin-top: 10%;
     font-size: 20px;
 }
 
-.length-option{
+.length-option {
     margin-top: 4%;
     font-size: 20px;
 }
 
-.check {
-    /*/////////////////////////*/
+input[type="checkbox"] {
+    /* Add your styles here to make the checkboxes look big and beautiful */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #000;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 5px;
+
 }
 
-.btn{
+input[type="checkbox"]:checked {
+    background-color: #000;
+}
+
+.btn {
     border: 0px;
     font-size: 20px;
 }
 
-.copy{
+#copy-btn {
     height: 100%;
     width: 20%;
-    position:absolute;
+    position: absolute;
     right: 0;
 }
 
-.generate{
+.generate {
     width: 100%;
     height: 50px;
     margin-top: 10%;
 }
 
+#popup-container {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.5s ease;
+}
+
+#popup-content {
+    background-color: #f1f1f1;
+    padding: 20px;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    color: #000;
+}
 
 
 /*Border radius*/
-#content{
+#content {
     --radius: 12px;
     border-radius: var(--radius);
 }
 
-#pass{
+#pass {
     border-top-left-radius: var(--radius);
     border-top-right-radius: var(--radius);
 }
 
-.copy{
+#copy-btn {
     border-top-right-radius: var(--radius);
 }
 
-.generate{
+.generate {
     border-bottom-left-radius: var(--radius);
     border-bottom-right-radius: var(--radius);
 }
