@@ -4,7 +4,7 @@ body {
 }
 
 body {
-    background-image: url("background.jpg");
+    background-image: url("/img/background.jpg");
     background-repeat: no-repeat;
     background-size: cover;
 
@@ -61,6 +61,8 @@ body {
 
 .content-center {
     display: block;
+    width: 100%;
+    text-align: center;
 }
 
 #label {
@@ -176,9 +178,9 @@ footer span {
 
 footer .material-icons {
     font-size: 16px;
+    line-height: 16px;
+    vertical-align: text-bottom;
 }
-
-
 
 #popup-container {
     position: absolute;
