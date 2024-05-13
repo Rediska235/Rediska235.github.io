@@ -4,6 +4,7 @@ body {
 }
 
 body {
+    background-color: #0E1424;
     background-image: url("/img/background.jpg");
     background-repeat: no-repeat;
     background-size: cover;
@@ -19,8 +20,7 @@ body {
     justify-content: center;
     padding-top: 40px;
     padding-bottom: 40px;
-    background-color: #d5d5d5;
-
+    
     color: #fff;
     font-family: Helvetica, sans-serif;
 }
