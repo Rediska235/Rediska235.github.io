@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Game</title>
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=LXGW+WenKai+TC&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="top-row">
+            <div class="slot">
+                <div id="dice-container" onclick="rollDice()">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="transparent"
+                        stroke="rgba(50, 50, 50, 1)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="dice">
+                        <rect width="18" height="18" x="3" y="3" rx="2" ry="2"></rect>
+                        <path d="M12 12h.01"></path>
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="transparent"
+                        stroke="rgba(50, 50, 50, 1)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="dice">
+                        <rect width="18" height="18" x="3" y="3" rx="2" ry="2"></rect>
+                        <path d="M15 9h.01"></path>
+                        <path d="M9 15h.01"></path>
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="transparent"
+                        stroke="rgba(50, 50, 50, 1)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="dice">
+                        <rect width="18" height="18" x="3" y="3" rx="2" ry="2"></rect>
+                        <path d="M16 8h.01"></path>
+                        <path d="M12 12h.01"></path>
+                        <path d="M8 16h.01"></path>
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="transparent"
+                        stroke="rgba(50, 50, 50, 1)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="dice">
+                        <rect width="18" height="18" x="3" y="3" rx="2" ry="2"></rect>
+                        <path d="M16 8h.01"></path>
+                        <path d="M8 8h.01"></path>
+                        <path d="M8 16h.01"></path>
+                        <path d="M16 16h.01"></path>
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="transparent"
+                        stroke="rgba(50, 50, 50, 1)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="dice">
+                        <rect width="18" height="18" x="3" y="3" rx="2" ry="2"></rect>
+                        <path d="M16 8h.01"></path>
+                        <path d="M8 8h.01"></path>
+                        <path d="M8 16h.01"></path>
+                        <path d="M16 16h.01"></path>
+                        <path d="M12 12h.01"></path>
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="transparent"
+                        stroke="rgba(50, 50, 50, 1)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="dice">
+                        <rect width="18" height="18" x="3" y="3" rx="2" ry="2"></rect>
+                        <path d="M16 8h.01"></path>
+                        <path d="M16 12h.01"></path>
+                        <path d="M16 16h.01"></path>
+                        <path d="M8 8h.01"></path>
+                        <path d="M8 12h.01"></path>
+                        <path d="M8 16h.01"></path>
+                    </svg>
+
+                </div>
+            </div>
+            <div class="slot" onclick="common()">
+                <div class="card" id="common">
+                </div>
+            </div>
+            <div class="slot" onclick="rare()">
+                <div class="card" id="rare">
+                </div>
+            </div>
+            <div class="slot" onclick="timer()">
+                <div id="timer">60</div>
+            </div>
+        </div>
+
+        <div id="common-cards" class="bottom-row">
+            <div class="row">
+                <div class="card-slot">
+                    <div class="card" id="card1">
+                        <h2 class="theme">География</h2>
+                        <div class="content">
+                            <ul>
+                                <li>
+                                    <div class="left">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36"
+                                            viewBox="0 0 24 24" fill="transparent" stroke="rgba(50, 50, 50, 1)"
+                                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                            class="lucide lucide-dice4">
+                                            <rect width="18" height="18" x="3" y="3" rx="2" ry="2"></rect>
+                                            <path d="M12 12h.01"></path>
+                                        </svg>
+                                        <span class="category">слова</span>
+                                    </div>
+                                    <div class="right">
+                                        <p class="word">Флаг</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="left">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36"
+                                            viewBox="0 0 24 24" fill="transparent" stroke="rgba(50, 50, 50, 1)"
+                                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                            class="lucide lucide-dice4">
+                                            <rect width="18" height="18" x="3" y="3" rx="2" ry="2"></rect>
+                                            <path d="M15 9h.01"></path>
+                                            <path d="M9 15h.01"></path>
+                                        </svg>
+                                        <span class="category">наоборот</span>
+                                    </div>
+                                    <div class="right">
+                                        <p class="word">Афганистан</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="left">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36"
+                                            viewBox="0 0 24 24" fill="transparent" stroke="rgba(50, 50, 50, 1)"
+                                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                            class="lucide lucide-dice4">
+                                            <rect width="18" height="18" x="3" y="3" rx="2" ry="2"></rect>
+                                            <path d="M16 8h.01"></path>
+                                            <path d="M12 12h.01"></path>
+                                            <path d="M8 16h.01"></path>
+                                        </svg>
+                                        <span class="category">рисунок</span>
+                                    </div>
+                                    <div class="right">
+                                        <p class="word">Столица</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="left">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36"
+                                            viewBox="0 0 24 24" fill="transparent" stroke="rgba(50, 50, 50, 1)"
+                                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                            class="lucide lucide-dice4">
+                                            <rect width="18" height="18" x="3" y="3" rx="2" ry="2"></rect>
+                                            <path d="M16 8h.01"></path>
+                                            <path d="M8 8h.01"></path>
+                                            <path d="M8 16h.01"></path>
+                                            <path d="M16 16h.01"></path>
+                                        </svg>
+                                        <span class="category">жесты</span>
+                                    </div>
+                                    <div class="right">
+                                        <p class="word">Колумб</p>
+                                    </div>
+                                </li>
+                                <li id="last-li">
+                                    <div class="left">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36"
+                                            viewBox="0 0 24 24" fill="transparent" stroke="rgba(50, 50, 50, 1)"
+                                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                            class="lucide lucide-dice4">
+                                            <rect width="18" height="18" x="3" y="3" rx="2" ry="2"></rect>
+                                            <path d="M16 8h.01"></path>
+                                            <path d="M8 8h.01"></path>
+                                            <path d="M8 16h.01"></path>
+                                            <path d="M16 16h.01"></path>
+                                            <path d="M12 12h.01"></path>
+                                        </svg>
+                                        <span class="category">да/нет</span>
+                                    </div>
+                                    <div class="right">
+                                        <p class="word">Глобус</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="card-slot">
+                    <div class="card" id="card2">
+                        <h2 class="theme">География</h2>
+                        <div class="content">
+                            <ul>
+                                <li>
+                                    <div class="left">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36"
+                                            viewBox="0 0 24 24" fill="transparent" stroke="rgba(50, 50, 50, 1)"
+                                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                            class="lucide lucide-dice4">
+                                            <rect width="18" height="18" x="3" y="3" rx="2" ry="2"></rect>
+                                            <path d="M12 12h.01"></path>
+                                        </svg>
+                                        <span class="category">слова</span>
+                                    </div>
+                                    <div class="right">
+                                        <p class="word">Флаг</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="left">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36"
+                                            viewBox="0 0 24 24" fill="transparent" stroke="rgba(50, 50, 50, 1)"
+                                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                            class="lucide lucide-dice4">
+                                            <rect width="18" height="18" x="3" y="3" rx="2" ry="2"></rect>
+                                            <path d="M16 8h.01"></path>
+                                            <path d="M8 16h.01"></path>
+                                        </svg>
+                                        <span class="category">наоборот</span>
+                                    </div>
+                                    <div class="right">
+                                        <p class="word">Афганистан</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="left">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36"
+                                            viewBox="0 0 24 24" fill="transparent" stroke="rgba(50, 50, 50, 1)"
+                                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                            class="lucide lucide-dice4">
+                                            <rect width="18" height="18" x="3" y="3" rx="2" ry="2"></rect>
+                                            <path d="M16 8h.01"></path>
+                                            <path d="M8 16h.01"></path>
+                                            <path d="M12 12h.01"></path>
+                                        </svg>
+                                        <span class="category">рисунок</span>
+                                    </div>
+                                    <div class="right">
+                                        <p class="word">Столица</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="left">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36"
+                                            viewBox="0 0 24 24" fill="transparent" stroke="rgba(50, 50, 50, 1)"
+                                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                            class="lucide lucide-dice4">
+                                            <rect width="18" height="18" x="3" y="3" rx="2" ry="2"></rect>
+                                            <path d="M16 8h.01"></path>
+                                            <path d="M8 8h.01"></path>
+                                            <path d="M8 16h.01"></path>
+                                            <path d="M16 16h.01"></path>
+                                        </svg>
+                                        <span class="category">жесты</span>
+                                    </div>
+                                    <div class="right">
+                                        <p class="word">Колумб</p>
+                                    </div>
+                                </li>
+                                <li id="last-li">
+                                    <div class="left">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36"
+                                            viewBox="0 0 24 24" fill="transparent" stroke="rgba(50, 50, 50, 1)"
+                                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                            class="lucide lucide-dice4">
+                                            <rect width="18" height="18" x="3" y="3" rx="2" ry="2"></rect>
+                                            <path d="M16 8h.01"></path>
+                                            <path d="M8 8h.01"></path>
+                                            <path d="M8 16h.01"></path>
+                                            <path d="M16 16h.01"></path>
+                                            <path d="M12 12h.01"></path>
+                                        </svg>
+                                        <span class="category">да/нет</span>
+                                    </div>
+                                    <div class="right">
+                                        <p class="word">Глобус</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="rare-cards" class="bottom-row">
+            <div class="row">
+                <div class="card-slot">
+                    <div class="card" id="card3">
+                        <h2 class="theme">Песня</h2>
+                        <p class="description">
+                            Спой песню пропустив данное слово. Твои тимейты должны угадать слово.
+                        </p>
+                        <p class="rare-word">
+                            Лучик
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="card-slot">
+                    <div class="card" id="card4">
+                        <h2 class="theme">Песня</h2>
+                        <p class="description">
+                            Спой песню пропустив данное слово. Твои тимейты должны угадать слово.
+                        </p>
+                        <p class="rare-word">
+                            Лучик
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

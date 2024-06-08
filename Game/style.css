@@ -1,0 +1,156 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "LXGW WenKai TC", cursive;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.top-row {
+    display: flex;
+    height: 12%;
+}
+
+.bottom-row {
+    height: 88%;
+}
+
+.row {
+    height: 50%;
+}
+
+.slot {
+    flex: 1;
+    font-size: 18px;
+    text-align: center;
+
+    padding: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-slot {
+    width: 100%;
+    height: 100%;
+    padding: 4%;
+}
+
+.card {
+    height: 100%;
+    width: 100%;
+
+    color: rgb(50, 50, 50);
+    font-size: 18px;
+    text-align: center;
+
+    border-radius: 15px;
+
+    padding-top: 2%;
+}
+
+#dice-container {
+    height: 80%;
+    aspect-ratio: 1;
+}
+
+#common {
+    background-color: rgb(152, 206, 229);
+}
+
+#rare {
+    background-color: rgb(245, 139, 101);
+}
+
+#timer {
+    font-size: 34px;
+    font-weight: 900;
+    text-align: center;
+}
+
+#card1 {
+    background-color: rgb(255, 252, 196);
+}
+
+#card2 {
+    background-color: rgb(152, 206, 229);
+}
+
+#card3 {
+    background-color: rgb(255, 252, 196);
+}
+
+#card4 {
+    background-color: rgb(229, 165, 152);
+}
+
+.theme {
+    margin: 5%;
+    font-weight: 100;
+}
+
+.content {
+    text-align: start;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.left {
+    width: 38%;
+}
+
+.right {
+    width: 62%;
+    display: flex;
+    justify-content: center;
+}
+
+li {
+    display: flex;
+    margin-left: 10%;
+    margin-bottom: 5%;
+    width: 80%;
+
+    border-bottom: 2px dotted rgb(50, 50, 50);
+}
+
+#last-li {
+    border: none;
+}
+
+.category {
+    font-size: 20px;
+    line-height: 0px;
+    vertical-align: text-top;
+}
+
+.word {
+    font-size: 26px;
+    font-weight: 900;
+    text-align: center;
+}
+
+.description {
+    height: 30%;
+    font-size: 24px;
+    padding: 2%;
+}
+
+.rare-word {
+    font-size: 34px;
+    font-weight: 900;
+    text-align: center;
+
+    margin-top: 12%;
+    padding: 2%;
+}
