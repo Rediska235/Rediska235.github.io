@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="valentine">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BeMine</title>
+    <!-- tailwind and daisy UI -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.3.1/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- manrope google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <!-- font awesome -->
+    <script src="https://kit.fontawesome.com/d7b7563d24.js" crossorigin="anonymous"></script>
+    <style>
+        .font-manrope {
+            font-family: 'Manrope', sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <main class="container mx-auto">
+    <div class="navbar bg-base-100">
+        <div class="flex-1">
+            <a class="btn btn-ghost text-xl">BeMine</a>
+        </div>
+        <div class="flex-none">
+            <ul class="menu menu-horizontal px-1">
+                <li class="me-2">
+                    <details class="h-[100%]">
+                        <summary class="h-[100%] flex align-middle">
+                            <p>Where to buy</p>
+                        </summary>
+                        <ul tabIndex={0} class="dropdown-content z-[1] p-2 shadow-2xl bg-base-300 rounded-box">
+                            <li>
+                                <a class="link link-hover">Dex screener</a></li>
+                            <li>
+                                <a class="link link-hover">Pump.fun</a></li>
+                            <li>
+                                <a class="link link-hover">Photon</a></li></li>
+                        </ul>
+                    </details>
+                </li>
+                <li>
+                    <!-- <Link class="btn btn-primary" href="/start">Играть</Link> -->
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="hero h-[50vh] bg-base-200">
+        <div class="hero-content text-center">
+            <div class="w-[60vw]">
+                <h1 class="text-6xl font-bold">Find your valentine</h1>
+                
+                <div class="grid auto-cols-max grid-flow-col gap-5 text-center bg-neutral rounded-box text-neutral-content mt-5 flex items-center justify-center">
+                    <div class="flex flex-col p-5">
+                      <span class="countdown font-mono text-9xl">
+                        <span style="--value:16;"></span>
+                      </span>
+                      days
+                    </div>
+                    <div class="flex flex-col p-5">
+                      <span class="countdown font-mono text-9xl">
+                        <span style="--value:10;"></span>
+                      </span>
+                      hours
+                    </div>
+                    <div class="flex flex-col p-5">
+                      <span class="countdown font-mono text-9xl">
+                        <span style="--value:24;"></span>
+                      </span>
+                      min
+                    </div>
+                    <div class="flex flex-col p-5">
+                      <span class="countdown font-mono text-9xl">
+                        <span style="--value:${counter};"></span>
+                      </span>
+                      sec
+                    </div>
+                </div>
+
+                <a class="btn btn btn-active text-xl m-5">Buy</a>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="h-[50vh] bg-base-200" id="how-to-play">
+        <div class="flex items-center justify-center">
+            <div>
+                <h2 class="text-5xl font-bold">Hearts Alight:</br> Celebrating Love on Valentine's Day</h2>
+                <p class="py-6 w-80">Join us in a celebration of love and affection this Valentine's Day! Explore romantic ideas, heartfelt gifts, and enchanting ways to make this day special for your loved ones. Discover the magic of Valentine's Day with us!</p>
+            </div>
+        </div>
+        <div class="flex flex-col items-center">
+            <a class="btn btn btn-active text-xl m-5">Became holder</a>
+        </div>
+    </div>
+    </main>
+
+    <footer class="footer p-10 bg-neutral text-neutral-content flex justify-between">
+        <aside>
+            <p>BeMine</p>
+            <p>Only love token</p>
+        </aside>
+        <nav>
+            <h6 class="footer-title">Links</h6>
+            <div class="flex gap-4">
+                <a class="link link-hover">TT</a>
+                <a class="link link-hover">X</a>
+                <a class="link link-hover">TG</a>
+            </div>
+        </nav>
+    </footer>
+    <script>
+    function setTheme(theme) {
+        document.documentElement.classList.remove('dark', 'light');
+        document.documentElement.classList.add(theme);
+    }
+    </script>
+</body>
+
+</html>
