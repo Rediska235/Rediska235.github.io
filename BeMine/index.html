@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BeMine</title>
+    <link rel="icon" href="favicon.ico" type="image/ico"/>
     <!-- tailwind and daisy UI -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@3.3.1/dist/full.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
@@ -14,113 +15,199 @@
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&display=swap" rel="stylesheet">
     <!-- font awesome -->
     <script src="https://kit.fontawesome.com/d7b7563d24.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
         .font-manrope {
             font-family: 'Manrope', sans-serif;
+        }
+
+
+        /* Responsive styles */
+        @media only screen and (max-width: 768px) {
+            .hero-content {
+                padding: 20px;
+            }
+
+            .hero-content .grid {
+                grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            }
+
+            .hero-content .countdown {
+                font-size: 8rem;
+            }
+        }
+
+        @media only screen and (max-width: 640px) {
+            .hero {
+                height: 80vh;
+            }
+
+            .hero-content {
+                padding: 10px;
+                max-width: 100rem !important;
+            }
+
+            .hero-content .grid {
+                grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+            }
+
+            .hero-content .countdown {
+                font-size: 2rem;
+            }
+
+            .gap-5 {
+                gap: 0.25rem !important;
+            }
+
+            .p-5 {
+                padding: 0.25rem !important;
+            }
+            
+            .text-5xl {
+                font-size: 2rem !important;
+                line-height: 1;
+            }
         }
     </style>
 </head>
 
 <body>
     <main class="container mx-auto">
-    <div class="navbar bg-base-100">
-        <div class="flex-1">
-            <a class="btn btn-ghost text-xl">BeMine</a>
-        </div>
-        <div class="flex-none">
-            <ul class="menu menu-horizontal px-1">
-                <li class="me-2">
-                    <details class="h-[100%]">
-                        <summary class="h-[100%] flex align-middle">
-                            <p>Where to buy</p>
-                        </summary>
-                        <ul tabIndex={0} class="dropdown-content z-[1] p-2 shadow-2xl bg-base-300 rounded-box">
-                            <li>
-                                <a class="link link-hover">Dex screener</a></li>
-                            <li>
-                                <a class="link link-hover">Pump.fun</a></li>
-                            <li>
-                                <a class="link link-hover">Photon</a></li></li>
-                        </ul>
-                    </details>
-                </li>
+        <div class="navbar bg-base-100">
+            <div class="flex-1">
+                <a class="btn btn-ghost text-xl" href="#">
+                    <img src="icon.svg" alt="icon" width="35" height="35">
+                    BeMine
+                </a>
+            </div>
+            <div class="flex-none">
+                <ul class="menu menu-horizontal px-1">
+                    <li class="me-2">
+                        <details class="h-[100%]">
+                            <summary class="h-[100%] flex align-middle">
+                                <p>Where to buy</p>
+                            </summary>
+                            <ul tabIndex={0} class="dropdown-content z-[1] p-2 shadow-2xl bg-base-300 rounded-box">
+                                <li>
+                                    <a class="link link-hover">Dex screener</a>
+                                </li>
+                                <li>
+                                    <a class="link link-hover">Pump.fun</a>
+                                </li>
+                                <li>
+                                    <a class="link link-hover">Photon</a>
+                                </li>
+                                </li>
+                            </ul>
+                        </details>
+                    </li>
                 <li>
                     <!-- <Link class="btn btn-primary" href="/start">Играть</Link> -->
                 </li>
-            </ul>
+                </ul>
+            </div>
         </div>
-    </div>
 
-    <div class="hero h-[50vh] bg-base-200">
-        <div class="hero-content text-center">
-            <div class="w-[60vw]">
-                <h1 class="text-6xl font-bold">Find your valentine</h1>
-                
-                <div class="grid auto-cols-max grid-flow-col gap-5 text-center bg-neutral rounded-box text-neutral-content mt-5 flex items-center justify-center">
-                    <div class="flex flex-col p-5">
-                      <span class="countdown font-mono text-9xl">
-                        <span style="--value:16;"></span>
-                      </span>
-                      days
+        <div class="hero h-[50vh] bg-base-200 md-5">
+            <div class="hero-content text-center">
+                <div class="w-[60vw]">
+                    <h1 class="text-6xl font-bold">Find your valentine</h1>
+
+                    <div
+                        class="grid auto-cols-max grid-flow-col gap-9 text-center bg-neutral rounded-box text-neutral-content mt-5 flex items-center justify-center w-2/3 mx-auto">
+                        <div class="flex flex-col p-5">
+                            <span id="days" class="countdown font-mono text-9xl">16</span>
+                            days
+                        </div>
+                        <div class="flex flex-col p-5">
+                            <span id="hours" class="countdown font-mono text-9xl">0</span>
+                            hours
+                        </div>
+                        <div class="flex flex-col p-5">
+                            <span id="minutes" class="countdown font-mono text-9xl">0</span>
+                            min
+                        </div>
+                        <div class="flex flex-col p-5">
+                            <span id="seconds" class="countdown font-mono text-9xl">0</span>
+                            sec
+                        </div>
                     </div>
-                    <div class="flex flex-col p-5">
-                      <span class="countdown font-mono text-9xl">
-                        <span style="--value:10;"></span>
-                      </span>
-                      hours
-                    </div>
-                    <div class="flex flex-col p-5">
-                      <span class="countdown font-mono text-9xl">
-                        <span style="--value:24;"></span>
-                      </span>
-                      min
-                    </div>
-                    <div class="flex flex-col p-5">
-                      <span class="countdown font-mono text-9xl">
-                        <span style="--value:${counter};"></span>
-                      </span>
-                      sec
+
+                    <a class="btn btn btn-active text-xl m-5" href="#">Buy</a>
+
+                    <div class="flex items-center justify-center">
+                        <a href="https://www.tiktok.com/"><i class="fa-brands fa-tiktok fa-xl mx-3"></i></a>
+                        <a href="https://web.telegram.org/a/#-1002049146326"><i
+                                class="fa-brands fa-telegram fa-xl mx-3"></i></a>
+                        <a href="https://x.com/"><i class="fa-brands fa-x-twitter fa-xl mx-3"></i></a>
                     </div>
                 </div>
-
-                <a class="btn btn btn-active text-xl m-5">Buy</a>
             </div>
         </div>
-    </div>
 
 
-    <div class="h-[50vh] bg-base-200" id="how-to-play">
-        <div class="flex items-center justify-center">
-            <div>
-                <h2 class="text-5xl font-bold">Hearts Alight:</br> Celebrating Love on Valentine's Day</h2>
-                <p class="py-6 w-80">Join us in a celebration of love and affection this Valentine's Day! Explore romantic ideas, heartfelt gifts, and enchanting ways to make this day special for your loved ones. Discover the magic of Valentine's Day with us!</p>
+        <div class="h-[50vh] bg-base-200 p-4 pt-10 flex" id="how-to-play">
+            <img src="icon.svg" alt="icon" width="400" height="400">
+            <div class="mt-12">
+                <div class="flex items-end justify-end">
+                    <div>
+                        <h2 class="text-5xl font-bold">Hearts Alight:</br> Celebrating Love on Valentine's Day</h2>
+                        <p class="py-6 w-80">Join us in a celebration of love and affection this Valentine's Day! Explore
+                            romantic ideas, heartfelt gifts, and enchanting ways to make this day special for your loved
+                            ones. Discover the magic of Valentine's Day with us!</p>
+                    </div>
+                </div>
+                <div class="flex flex-col items-center">
+                    <a class="btn btn btn-active text-xl m-5" href="#">Become holder</a>
+                </div>
             </div>
         </div>
-        <div class="flex flex-col items-center">
-            <a class="btn btn btn-active text-xl m-5">Became holder</a>
-        </div>
-    </div>
     </main>
-
-    <footer class="footer p-10 bg-neutral text-neutral-content flex justify-between">
-        <aside>
-            <p>BeMine</p>
-            <p>Only love token</p>
-        </aside>
-        <nav>
-            <h6 class="footer-title">Links</h6>
-            <div class="flex gap-4">
-                <a class="link link-hover">TT</a>
-                <a class="link link-hover">X</a>
-                <a class="link link-hover">TG</a>
-            </div>
-        </nav>
-    </footer>
     <script>
-    function setTheme(theme) {
-        document.documentElement.classList.remove('dark', 'light');
-        document.documentElement.classList.add(theme);
-    }
+        function setTheme(theme) {
+            document.documentElement.classList.remove('dark', 'light');
+            document.documentElement.classList.add(theme);
+        }
+
+        const countDownDate = new Date('Feb 14, 2025 00:00:00').getTime();
+        const countdown = setInterval(function () {
+            const now = new Date().getTime();
+            const distance = countDownDate - now;
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            document.getElementById('days').innerText = days;
+            document.getElementById('hours').innerText = hours;
+            document.getElementById('minutes').innerText = minutes;
+            document.getElementById('seconds').innerText = seconds;
+
+            if (distance < 0) {
+                clearInterval(countdown);
+                document.getElementById('days').innerText = '0';
+                document.getElementById('hours').innerText = '0';
+                document.getElementById('minutes').innerText = '0';
+                document.getElementById('seconds').innerText = '0';
+            }
+        }, 1000);
+
+        const now = new Date().getTime();
+        const distance = countDownDate - now;
+
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        document.getElementById('days').innerText = days;
+        document.getElementById('hours').innerText = hours;
+        document.getElementById('minutes').innerText = minutes;
+        document.getElementById('seconds').innerText = seconds;
+
     </script>
 </body>
 
