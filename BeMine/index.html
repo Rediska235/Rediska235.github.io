@@ -5,10 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BeMine</title>
-    <link rel="icon" href="favicon.ico" type="image/ico"/>
+    <link rel="icon" href="favicon.ico" type="image/ico" />
     <!-- tailwind and daisy UI -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@3.3.1/dist/full.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <link href="style.css" rel="stylesheet">
     <!-- manrope google font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -25,7 +26,7 @@
 
 
         /* Responsive styles */
-        @media only screen and (max-width: 768px) {
+        @media only screen and (max-width: 1400px) {
             .hero-content {
                 padding: 20px;
             }
@@ -34,8 +35,30 @@
                 grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
             }
 
-            .hero-content .countdown {
-                font-size: 8rem;
+            .text-9xl {
+                font-size: 10vw !important;
+            }
+            
+            .div-all{
+                width: 100vw !important;
+            }
+
+            .timer-container{
+                height: 10vh !important;
+                width: 80% !important;
+                display: grid !important;
+                grid-template-columns: none !important;
+                padding-bottom: 20% !important;
+                margin: 0 !important;
+            }
+
+            .gap-9{
+                gap: 10% !important;
+            }
+
+            .flex-col{
+                height: 50% !important;
+                width: 20% !important;
             }
         }
 
@@ -64,10 +87,61 @@
             .p-5 {
                 padding: 0.25rem !important;
             }
-            
+
             .text-5xl {
                 font-size: 2rem !important;
                 line-height: 1;
+            }
+
+            .no-p{
+                padding: 0 !important;
+            }
+
+            .div-all{
+                width: 100vw !important;
+            }
+
+            .timer-container{
+                height: 10vh !important;
+                width: 80% !important;
+                display: grid !important;
+                grid-template-columns: none !important;
+                padding-bottom: 25% !important;
+                margin-left: auto !important;
+                margin-right: auto !important;
+            }
+
+            .gap-9{
+                gap: 10% !important;
+            }
+
+            .flex-col{
+                height: 50% !important;
+                width: 20% !important;
+            }
+
+            .text-3xl{
+                font-size: 20px !important;
+            }
+
+            .main-div{
+                display: block !important;
+            }
+
+            .left-div{
+                width: 100% !important;
+            }
+
+            .div-100{
+                width: 100% !important;
+            }
+
+            .second-title{
+                padding-top: 10% !important;
+            }
+
+            .become-holder-div{
+                margin-top: 0 !important;
             }
         }
     </style>
@@ -82,7 +156,7 @@
                     BeMine
                 </a>
             </div>
-            <div class="flex-none">
+            <!-- <div class="flex-none">
                 <ul class="menu menu-horizontal px-1">
                     <li class="me-2">
                         <details class="h-[100%]">
@@ -99,24 +173,26 @@
                                 <li>
                                     <a class="link link-hover">Photon</a>
                                 </li>
-                                </li>
-                            </ul>
-                        </details>
                     </li>
+                </ul>
+                </details>
+                </li>
                 <li>
-                    <!-- <Link class="btn btn-primary" href="/start">Играть</Link> -->
                 </li>
                 </ul>
-            </div>
+            </div> -->
         </div>
 
-        <div class="hero h-[50vh] bg-base-200 md-5">
-            <div class="hero-content text-center">
-                <div class="w-[60vw]">
-                    <h1 class="text-6xl font-bold">Find your valentine</h1>
+        <div class="hero h-[60vh] bg-base-200 md-5">
+            <div class="hero-content text-center no-p">
+                <div class="w-[60vw] div-all">
+                    <h1 class="text-6xl font-bold mt-6">Find your valentine</h1>
+
+                    <p class="text-xl mt-6">Holders will be able to send valentines to random holders</p>
+                    <p class="text-xl mb-6">And on February 14th they will receive valentines sent to them</p>
 
                     <div
-                        class="grid auto-cols-max grid-flow-col gap-9 text-center bg-neutral rounded-box text-neutral-content mt-5 flex items-center justify-center w-2/3 mx-auto">
+                        class="timer-container grid auto-cols-max grid-flow-col gap-9 text-center bg-neutral rounded-box text-neutral-content mt-5 flex items-center justify-center w-2/3 mx-auto">
                         <div class="flex flex-col p-5">
                             <span id="days" class="countdown font-mono text-9xl">16</span>
                             days
@@ -143,27 +219,180 @@
                                 class="fa-brands fa-telegram fa-xl mx-3"></i></a>
                         <a href="https://x.com/"><i class="fa-brands fa-x-twitter fa-xl mx-3"></i></a>
                     </div>
-                </div>
-            </div>
-        </div>
 
-
-        <div class="h-[50vh] bg-base-200 p-4 pt-10 flex" id="how-to-play">
-            <img src="icon.svg" alt="icon" width="400" height="400">
-            <div class="mt-12">
-                <div class="flex items-end justify-end">
-                    <div>
-                        <h2 class="text-5xl font-bold">Hearts Alight:</br> Celebrating Love on Valentine's Day</h2>
-                        <p class="py-6 w-80">Join us in a celebration of love and affection this Valentine's Day! Explore
-                            romantic ideas, heartfelt gifts, and enchanting ways to make this day special for your loved
-                            ones. Discover the magic of Valentine's Day with us!</p>
+                    <div class="flex items-center justify-center mt-9">
+                        <div>
+                            <h2 class="text-3xl">TMgsO4JtJJnfViELgMI8hFwpeRGNEBFt</h2>
+                        </div>
                     </div>
                 </div>
-                <div class="flex flex-col items-center">
-                    <a class="btn btn btn-active text-xl m-5" href="#">Become holder</a>
-                </div>
             </div>
         </div>
+
+
+
+        <div class="h-[105vh] bg-base-200 p-4 pt-10 flex main-div no-p" id="how-to-play">
+            <div class="mt-12 left-div">
+                <div class="flex items-center justify-center">
+                    <div>
+                        <h2 class="text-4xl font-bold second-title">Buy your love ticket</h2>
+                    </div>
+                </div>
+
+                <div class="flex items-center justify-center">
+                    <img src="icon.svg" alt="icon" width="500" height="500">
+                </div>
+                <div class="mt-12 become-holder-div">
+                    <div class="flex items-center justify-center">
+                        <a class="btn btn btn-active text-xl" href="#">Become holder</a>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <ul
+                    class="timeline not-prose mb-20 timeline-compact timeline-snap-icon timeline-vertical bg-base-200 rounded-box lg:ps-6 pe-10 ps-6 pt-10 lg:pe-16 lg:mt-16">
+                    <li class="lg:gap-x-6"><!---->
+                        <div class="timeline-middle"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
+                                fill="currentColor" class="text-success h-5 w-5">
+                                <path fill-rule="evenodd"
+                                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
+                                    clip-rule="evenodd"></path>
+                            </svg><!----></div>
+                        <div class="timeline-box mb-4 w-full p-4 lg:mb-3 lg:p-5 timeline-end">
+                            <h2 class="mb-6 text-lg font-black">Socials</h2>
+                            <ol>
+                                <li class="my-2 flex gap-2"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
+                                        fill="currentColor" class="text-success mt-1.5 inline-block h-4 w-4 shrink-0">
+                                        <path fill-rule="evenodd"
+                                            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
+                                            clip-rule="evenodd"></path>
+                                    </svg><!----> <span class="text-base-content/60">Tiktok</span></li>
+                                <li class="my-2 flex gap-2"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
+                                        fill="currentColor" class="text-success mt-1.5 inline-block h-4 w-4 shrink-0">
+                                        <path fill-rule="evenodd"
+                                            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
+                                            clip-rule="evenodd"></path>
+                                    </svg><!----> <span class="text-base-content/60">Telegram</span></li>
+                                <li class="my-2 flex gap-2"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
+                                        fill="currentColor" class="text-success mt-1.5 inline-block h-4 w-4 shrink-0">
+                                        <path fill-rule="evenodd"
+                                            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
+                                            clip-rule="evenodd"></path>
+                                    </svg><!----> <span class="text-base-content/60">X</span></li>
+                            </ol>
+                        </div>
+                        <hr class="bg-success"><!---->
+                    </li>
+                    <li class="lg:gap-x-6">
+                        <hr class="bg-success"><!---->
+                        <div class="timeline-middle"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
+                                fill="currentColor" class="text-success h-5 w-5">
+                                <path fill-rule="evenodd"
+                                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
+                                    clip-rule="evenodd"></path>
+                            </svg><!----></div>
+                        <div class="timeline-box mb-4 w-full p-4 lg:mb-3 lg:p-5 timeline-end">
+                            <h2 class="mb-6 text-lg font-black">Coin release</h2>
+                            <ol>
+                                <li class="my-2 flex gap-2"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
+                                        fill="currentColor" class="text-success mt-1.5 inline-block h-4 w-4 shrink-0">
+                                        <path fill-rule="evenodd"
+                                            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
+                                            clip-rule="evenodd"></path>
+                                    </svg><!----> <span class="text-base-content/60">To the moon!</span></li>
+
+                            </ol>
+                        </div>
+                        <hr class="false"><!---->
+                    </li>
+                    <li class="lg:gap-x-6">
+                        <hr class="false"><!---->
+                        <div class="timeline-middle"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
+                                fill="currentColor" class="text-base-content/30 h-5 w-5">
+                                <path fill-rule="evenodd"
+                                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm.75-13a.75.75 0 00-1.5 0v5c0 .414.336.75.75.75h4a.75.75 0 000-1.5h-3.25V5z"
+                                    clip-rule="evenodd"></path>
+                            </svg><!----></div>
+                        <div class="timeline-box mb-4 w-full p-4 lg:mb-3 lg:p-5 timeline-end">
+                            <div class="flex justify-between">
+                                <h2 class="mb-6 text-lg font-black">Top holders table</h2>
+                                <p class="text-m">05.02.2025</p>
+                            </div>
+                            <ol>
+                                <li class="my-2 flex gap-2">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
+                                        class="text-gray mt-1.5 inline-block h-4 w-4 shrink-0">
+                                        <path fill-rule="evenodd"
+                                            d="M10 18a8 8 0 100-16 8 8 0 000 16zm.75-13a.75.75 0 00-1.5 0v5c0 .414.336.75.75.75h4a.75.75 0 000-1.5h-3.25V5z"
+                                            clip-rule="evenodd"></path>
+                                    </svg>
+                                    <span class="text-base-content/60">A table with top holders</span>
+                                </li>
+                            </ol>
+                        </div>
+                        <hr class="false"><!---->
+                    </li>
+                    <li class="lg:gap-x-6">
+                        <hr class="false"><!---->
+                        <div class="timeline-middle"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
+                                fill="currentColor" class="text-base-content/30 h-5 w-5">
+                                <path fill-rule="evenodd"
+                                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm.75-13a.75.75 0 00-1.5 0v5c0 .414.336.75.75.75h4a.75.75 0 000-1.5h-3.25V5z"
+                                    clip-rule="evenodd"></path>
+                            </svg><!----></div>
+                        <div class="timeline-box mb-4 w-full p-4 lg:mb-3 lg:p-5 timeline-end">
+                            <div class="flex justify-between">
+                                <h2 class="mb-6 text-lg font-black">Send valentines</h2>
+                                <p class="text-m">08.02.2025</p>
+                            </div>
+                            <ol>
+                                <li class="my-2 flex gap-2">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
+                                        class="text-gray mt-1.5 inline-block h-4 w-4 shrink-0">
+                                        <path fill-rule="evenodd"
+                                            d="M10 18a8 8 0 100-16 8 8 0 000 16zm.75-13a.75.75 0 00-1.5 0v5c0 .414.336.75.75.75h4a.75.75 0 000-1.5h-3.25V5z"
+                                            clip-rule="evenodd"></path>
+                                    </svg>
+                                    <span class="text-base-content/60">Holders will have the opportunity to send
+                                        valentines to other holders</span>
+                                </li>
+
+                            </ol>
+                        </div>
+                        <hr class="false"><!---->
+                    </li>
+                    <li class="lg:gap-x-6">
+                        <hr class="false"><!---->
+                        <div class="timeline-middle"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
+                                fill="currentColor" class="text-base-content/30 h-5 w-5">
+                                <path fill-rule="evenodd"
+                                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm.75-13a.75.75 0 00-1.5 0v5c0 .414.336.75.75.75h4a.75.75 0 000-1.5h-3.25V5z"
+                                    clip-rule="evenodd"></path>
+                            </svg><!----></div>
+                        <div class="timeline-box mb-4 w-full p-4 lg:mb-3 lg:p-5 timeline-end">
+                            <div class="flex justify-between">
+                                <h2 class="mb-6 text-lg font-black">Valentine's day</h2>
+                                <p class="text-m">14.02.2025</p>
+                            </div>
+                            <ol>
+                                <li class="my-2 flex gap-2">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
+                                        class="text-gray mt-1.5 inline-block h-4 w-4 shrink-0">
+                                        <path fill-rule="evenodd"
+                                            d="M10 18a8 8 0 100-16 8 8 0 000 16zm.75-13a.75.75 0 00-1.5 0v5c0 .414.336.75.75.75h4a.75.75 0 000-1.5h-3.25V5z"
+                                            clip-rule="evenodd"></path>
+                                    </svg>
+                                    <span class="text-base-content/60">Receive the valentines that were sent to
+                                        you</span>
+                                </li>
+
+                            </ol>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
     </main>
     <script>
         function setTheme(theme) {
