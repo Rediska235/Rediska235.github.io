@@ -1,0 +1,59 @@
+Add-Type -TypeDefinition @'
+using System;
+using System.Runtime.InteropServices;
+
+public class KeyboardHelper {
+    [DllImport("user32.dll")]
+    public static extern short GetAsyncKeyState(int vKey);
+    
+    [DllImport("user32.dll")]
+    public static extern void keybd_event(byte bVk, byte bScan, uint dwFlags, UIntPtr dwExtraInfo);
+    
+    public static bool IsKeyPressed(int keyCode) {
+        return (GetAsyncKeyState(keyCode) & 0x8000) != 0;
+    }
+    
+    public static void SendKey(byte vkCode) {
+        const uint KEYEVENTF_KEYDOWN = 0x0000;
+        const uint KEYEVENTF_KEYUP = 0x0002;
+        keybd_event(vkCode, 0, KEYEVENTF_KEYDOWN, UIntPtr.Zero);
+        keybd_event(vkCode, 0, KEYEVENTF_KEYUP, UIntPtr.Zero);
+    }
+}
+'@ -IgnoreWarnings
+
+# Letters with probabilities (f and [ appear 3x more often)
+$keyMap = @{
+    's' = 0x53
+    'd' = 0x44
+    'f' = 0x46
+    'p' = 0x50
+    '[' = 0xDB
+}
+
+# Create weighted array (f and [ appear 3 times)
+$weightedLetters = 's','d','f','f','[','[','p'
+
+$VK_END = 0x23  # Virtual key code for End key
+
+Write-Host "Press END key to laught"
+Write-Host "Press Ctrl+C to exit"
+
+
+try {
+    while ($true) {
+        if ([KeyboardHelper]::IsKeyPressed($VK_END)) {
+            $randomChar = Get-Random -InputObject $weightedLetters
+            $keyCode = $keyMap[$randomChar]
+            
+            [KeyboardHelper]::SendKey($keyCode)
+            
+            # Prevent multiple sends from a single key press
+            Start-Sleep -Milliseconds 30
+        }
+        Start-Sleep -Milliseconds 30
+    }
+}
+finally {
+    Write-Host "Script terminated"
+}
