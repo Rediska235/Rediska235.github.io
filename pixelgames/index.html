@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>128x32px Game Emulator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>128x32px Game Emulator</h1>
+            <p class="subtitle">Test your pixel games before uploading to OLED display</p>
+        </header>
+        
+        <main>
+            <div class="emulator-container">
+                <div class="screen-wrapper">
+                    <canvas id="gameCanvas" width="128" height="32"></canvas>
+                    <div class="screen-overlay">128×32</div>
+                </div>
+                
+                <div class="controls">
+                    <button id="jumpButton" class="btn-action">JUMP (SPACE)</button>
+                    <div class="instructions">
+                        <p>Press SPACE or CLICK to jump</p>
+                        <p>Press R to restart</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="info-panel">
+                <div class="info-box">
+                    <h3>Game Status</h3>
+                    <p>Score: <span id="score">0</span></p>
+                    <p>High Score: <span id="highScore">0</span></p>
+                    <p>FPS: <span id="fps">0</span></p>
+                </div>
+                
+                <div class="info-box">
+                    <h3>Display Info</h3>
+                    <p>Resolution: 128×32 pixels</p>
+                    <p>Colors: Monochrome (1-bit)</p>
+                    <p>Aspect Ratio: 4:1</p>
+                </div>
+            </div>
+        </main>
+        
+        <footer>
+            <p>Экран 128x32px | Для тестирования пиксельных игр перед переносом на физический дисплей</p>
+        </footer>
+    </div>
+
+    <script src="flappy-bird.js"></script>
+    <script src="display-adapter.js"></script>
+    <script src="game-controller.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
